@@ -1,7 +1,10 @@
 package com.srbastiandev.randomimages
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import androidx.lifecycle.MutableLiveData
@@ -13,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        supportActionBar?.hide()
 
         var imagePic: ImageView = findViewById(R.id.imagePic)
         var imagePicTwo: ImageView = findViewById(R.id.imagePicTwo)
